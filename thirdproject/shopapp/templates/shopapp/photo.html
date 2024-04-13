@@ -1,0 +1,17 @@
+{% extends 'shopapp/base.html' %}
+
+{% block title %}{{ client.name }}{% endblock %}
+
+{% block content %}
+<body class="body__photo">
+    <div class="container__photo">
+        <div class="form__container">
+            <form class="form__add" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form }}
+                <input class="button__photo" type="submit" value="Отправить">
+            </form>
+        </div>
+    </div>
+</body>
+{% endblock %}
